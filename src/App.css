@@ -50,9 +50,10 @@
 
 .user-card {
   border: 1px solid white;
-  width: 15rem;
+  width: 11rem;
   padding: 1rem;
   border-radius: 15px;
+  font-size:15px;
 }
 
 .avatar {
