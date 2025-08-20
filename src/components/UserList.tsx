@@ -1,5 +1,4 @@
 import type { User } from "../types/shared";
-// import { UserStatus } from "../types/shared";
 import { statusConfig } from "../types/shared";
 
 type UserListProps = {
@@ -8,8 +7,8 @@ type UserListProps = {
 
 const UserList = ({ data }: UserListProps) => {
   return (
-    <div>
-      <h3>UserList</h3>
+    <div className="p-4">
+      <h3 className="text-xl pb-4">UserList</h3>
       <div className="user-list">
         {data.map((user) => {
           const config = statusConfig[user.status];
@@ -39,7 +38,7 @@ const UserList = ({ data }: UserListProps) => {
                 > {" "}</span>
 
               </div>
-              <p>{user.bio}</p>
+              <p className="pt-6">{user.bio}</p>
             </div>
           );
         })}
