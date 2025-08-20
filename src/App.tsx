@@ -1,7 +1,6 @@
 import "./App.css";
+import UserList from "./component/UserList";
 import { users } from "./data/users";
-import UserList from "./components/UserList";
-
 function App() {
   return (
     <div>

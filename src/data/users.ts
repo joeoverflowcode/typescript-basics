@@ -1,38 +1,14 @@
 export interface User {
-  id: number;
-  first_name: string;
-  last_name: string;
-  avatar_url: string;
-  email: string;
-};
+    id: number;
+    first_name: string;
+    last_name: string;
+    avatar_url: string;
+    email: string;
+}
 
-export const users: User[] = [
-  {
-    id: 1,
-    first_name: "Jim",
-    last_name: "Grace",
-    avatar_url: "./public/vite.svg",
-    email: "test@email.com",
-  },
-    {
-    id: 2,
-    first_name: "Jackie",
-    last_name: "Mayers",
-    avatar_url: "./public/vite.svg",
-    email: "test1@email.com",
-  },
-    {
-    id: 3,
-    first_name: "Wendy",
-    last_name: "Lee",
-    avatar_url: "./public/vite.svg",
-    email: "email1@email.com",
-  },
-      {
-    id: 4,
-    first_name: "Bruce",
-    last_name: "Hill",
-    avatar_url: "./public/vite.svg",
-    email: "email2@email.com",
-  },
-];
+export const users:User[] = [
+  { id: 1, first_name: "Alice", last_name:'Brown', avatar_url:'../public/1.png', email: "alice@example.com" },
+  { id: 2, first_name: "Steve", last_name:'Cross', avatar_url:'../public/2.png', email: "test@sample.com" },
+  { id: 3, first_name: "Margot", last_name:'Reese', avatar_url:'../public/3.png', email: "margo@email.com" },
+  { id: 4, first_name: "Jeffrey", last_name:'Allen', avatar_url:'../public/4.png', email: "test@example.com" }
+]
