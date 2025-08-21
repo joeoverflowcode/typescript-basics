@@ -8,6 +8,7 @@ export type StatusConfig = {
     label: string;
     icon: React.ComponentType<LucideProps>
 } 
+
 export const statusConfig: Record<UserStatus, StatusConfig> = {
   active: {
     class: "bg-green-50 text-green-700 ring-green-600/20",

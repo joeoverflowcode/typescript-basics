@@ -6,9 +6,10 @@ interface StatusBadgeProps {
   className?: string;
 }
 
-export const StatusBadge = ({ status, className = " " }: StatusBadgeProps) => {
+export const StatusBadge = ({ status, className = '' }: StatusBadgeProps) => {
   const config = statusConfig[status];
   const Icon = config.icon;
+  
   return (
     <span
       className={`inline-flex items-center gap-x-1 px-3 py-1 rounded-full text-sm font-medium ring-1 ring-inset mt-3 ${config.class} ${className}`}
