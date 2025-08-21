@@ -22,17 +22,22 @@
   }
 }
 
-.user-list{
+.container {
+  padding: 10px;
+}
+
+.user-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap:2rem;
-  justify-content: center;
+  gap: 2rem;
+  margin: auto;
+  padding: 20px;
 }
 
 .user-card {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -40,7 +45,7 @@
   max-width: 14rem;
   padding: 1rem;
   border-radius: 15px;
-  font-size:15px;
+  font-size: 15px;
 }
 
 .avatar {
@@ -49,5 +54,4 @@
   width: 4.5rem;
   height: 4.5rem;
   margin-bottom: 10px;
-
 }
