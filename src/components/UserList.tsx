@@ -1,4 +1,5 @@
 import type { User } from "../types/user.types";
+import GenderBadge from "./GenderBadge";
 import StatusBadge from "./StatusBadge";
 
 type UserListProps = {
@@ -20,8 +21,9 @@ const UserList = ({ data }: UserListProps) => {
             />
             <p className="pb-2">
               {user.first_name} <span>{user.last_name}</span>
+            <p className="text-xs">{user.user_name}</p>
             </p>
-            <p className="text-xs">{user.email}</p>
+            <GenderBadge gender={user.gender} />
             <StatusBadge status={user.status} />
             <p className="pt-4">{user.bio}</p>
           </div>
