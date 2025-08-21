@@ -1,27 +1,14 @@
+import type { UserStatus } from "../types/user.types";
+import type { LucideProps } from "lucide-react";
 import { CheckCircle, XCircle, Clock } from "lucide-react";
-import type {LucideProps} from 'lucide-react'
 
-export interface User {
-  id: number;
-  first_name: string;
-  last_name: string;
-  email: string;
-  avatar_url: string;
-  background_color: string;
-  bio: string;
-  status: UserStatus;
-}
 
-export type UserStatus = "active" | "inactive" | "pending";
-
-export const statusConfig: Record<
-  UserStatus,
-  {
+export type StatusConfig = {
     class: string;
     label: string;
     icon: React.ComponentType<LucideProps>
-  }
-> = {
+} 
+export const statusConfig: Record<UserStatus, StatusConfig> = {
   active: {
     class: "bg-green-50 text-green-700 ring-green-600/20",
     label: "Active",

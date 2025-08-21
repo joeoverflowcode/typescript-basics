@@ -1,4 +1,4 @@
-import type { User } from "../types/shared";
+import type { User } from "../types/user.types";
 
 export const users: User[] = [
   {
@@ -11,7 +11,7 @@ export const users: User[] = [
     bio: "Software engineer with a passion for open-source projects and hiking in the mountains.",
     status: "active",
   },
-    {
+  {
     id: 2,
     first_name: "Gil",
     last_name: "Martinez",
@@ -19,7 +19,7 @@ export const users: User[] = [
     avatar_url: "../public/2.png",
     background_color: "#e5fce5ff",
     bio: "UX designer who loves creating intuitive interfaces and practicing photography in my free time.",
-    status: "active"
+    status: "active",
   },
   {
     id: 5,
@@ -29,7 +29,7 @@ export const users: User[] = [
     avatar_url: "../public/5.png",
     background_color: "#f9eabeff",
     bio: "Frontend developer passionate about accessibility and sustainable web design.",
-    status: "inactive"
+    status: "inactive",
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ export const users: User[] = [
     avatar_url: "../public/3.png",
     background_color: "#f9cfe1ff",
     bio: "Data scientist specializing in machine learning algorithms and an amateur chef on weekends.",
-    status: "pending"
+    status: "pending",
   },
   {
     id: 4,
@@ -49,6 +49,6 @@ export const users: User[] = [
     avatar_url: "../public/4.png",
     background_color: "#c7d7ffff",
     bio: "Product manager with 5+ years experience in tech startups. Avid reader and coffee enthusiast.",
-    status: "active"
+    status: "active",
   },
 ];
