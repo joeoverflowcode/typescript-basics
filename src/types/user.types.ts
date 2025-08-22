@@ -1,16 +1,52 @@
-export interface User {
+export interface BaseUser {
   id: number;
   first_name: string;
   last_name: string;
   email: string;
   avatar_url: string;
   background_color: string;
-  bio: string;
+  join_date: string
+  gender: UserGender;
   status: UserStatus;
-  gender: UserGender
-  user_name:string
+  role: UserRole;
 }
 
 export type UserStatus = "active" | "inactive" | "pending";
 
 export type UserGender = "male" | "female";
+
+export type UserRole = "member" | "admin" | "coach";
+
+
+interface MemberUser extends BaseUser {
+  role: "member";
+  user_name: string;
+  membership_tier: "basic" | "premium";
+  fitness_goals: string;
+}
+
+interface CoachUser extends BaseUser {
+  role: "coach";
+  specialties: string[]
+  bio: string;
+}
+
+interface AdminUser extends BaseUser {
+  role: 'admin'
+  permissions: string []
+  access_level?: 'staff' | 'supervisor' | 'manager'
+}
+
+export type User = MemberUser | CoachUser | AdminUser
+
+export function isMember(user: User): user is MemberUser {
+  return user.role ==='member'
+}
+
+export function isCoach(user: User): user is CoachUser {
+  return user.role === 'coach'
+}
+
+export function isAdmin(user: User): user is AdminUser {
+  return user.role ==="admin"
+}

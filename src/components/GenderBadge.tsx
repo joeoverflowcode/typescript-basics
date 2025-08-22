@@ -10,7 +10,7 @@ const GenderBadge = ({gender, className= ''}: GenderBadgeProps) => {
   const Icon = config.icon
     return (
     <span
-      className={`inline-flex items-center gap-x-1 px-3 py-1 rounded-full text-sm font-medium ring-1 ring-inset mt-3 ${config.class} ${className}`}
+      className={`inline-flex items-center gap-x-1 px-3 py-1 rounded-full text-sm font-medium ring-1 ring-inset ${config.class} ${className}`}
     >
       <Icon className="h-4 w-4" />
       {config.label}

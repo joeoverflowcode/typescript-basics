@@ -19,7 +19,6 @@ export const genderConfig: Record<UserGender, GenderConfig> = {
         class:"bg-pink-50 text-pink-700 ring-pink-600/20",
         label: "Female",
         icon: Venus,
-
     }
 
 }
