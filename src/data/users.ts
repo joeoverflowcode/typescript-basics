@@ -44,7 +44,6 @@ export const users: User[] = [
     join_date: "12/15/2019",
     role: "member",
     membership_tier: "premium"
-
   },
   {
     id: 3,
