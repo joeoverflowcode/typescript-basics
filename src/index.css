@@ -54,9 +54,10 @@
   :root {
     color: #213547;
     background-color: #ffffff;
+    --avatar-ring-light: #000000;
+    --avatar-ring-dark: #ffffff;
   }
 }
-
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -166,9 +167,4 @@
 }
 
 .avatar {
-  border: 3px solid white;
-  border-radius: 50%;
-  width: 4.5rem;
-  height: 4.5rem;
-  margin-bottom: 10px;
 }

@@ -1,5 +1,6 @@
 import type { UserGender } from '../types/user.types'
 import { genderConfig } from '../config/gender.config';
+import { Badge } from './ui/badge';
 
 interface GenderBadgeProps {
     gender: UserGender;
@@ -9,12 +10,12 @@ const GenderBadge = ({gender, className= ''}: GenderBadgeProps) => {
   const config = genderConfig[gender]
   const Icon = config.icon
     return (
-    <span
-      className={`inline-flex items-center gap-x-1 px-3 py-1 rounded-full text-sm font-medium ring-1 ring-inset ${config.class} ${className}`}
+    <Badge
+      className={`${config.class} ${className}`}
     >
-      <Icon className="h-4 w-4" />
+      <Icon />
       {config.label}
-    </span>
+    </Badge>
   )
 }
 
