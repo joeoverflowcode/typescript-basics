@@ -39,8 +39,8 @@ export const users: User[] = [
     avatar_url: "../5.png",
     background_color: "#f9eabeff",
     fitness_goals: "gain 10 lbs and put on some muscle",
-    status: "inactive",
-    user_name: "Flex7Guy7",
+    status: "active",
+    user_name: "FlexxGuy3",
     join_date: "12/15/2019",
     role: "member",
     membership_tier: "premium",
@@ -74,7 +74,7 @@ export const users: User[] = [
     access_level: "supervisor",
   },
   {
-    id: 3,
+    id: 7,
     first_name: "Sarah",
     last_name: "Davis",
     gender: "female",
@@ -89,7 +89,7 @@ export const users: User[] = [
     join_date: "03/10/2014",
   },
   {
-    id: 4,
+    id: 6,
     first_name: "Robert",
     last_name: "Wilson",
     gender: "male",

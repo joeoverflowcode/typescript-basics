@@ -3,6 +3,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@layer components {
+  .ring-avatar {
+    @apply ring-3 ring-foreground; 
+  }
+}
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -160,11 +165,26 @@
   align-items: center;
   text-align: center;
   border: 1px solid rgb(61, 61, 61);
-  width: 10rem;
+  width: 20rem;
+  padding: 1rem;
+  border-radius: 15px;
+  font-size: 15px;
+}
+.member-card {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  align-items: center;
+  /* text-align: center; */
+  border: 1px solid rgb(61, 61, 61);
+  width: 20rem;
   padding: 1rem;
   border-radius: 15px;
   font-size: 15px;
 }
 
-.avatar {
+.h3{
+  font-size: xx-large;
+  text-align: center;
 }
+

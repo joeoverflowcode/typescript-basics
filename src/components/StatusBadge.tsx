@@ -1,5 +1,6 @@
 import { statusConfig } from "../config/status.config";
 import type { UserStatus } from "../types/user.types";
+import { Badge } from "./ui/badge";
 
 interface StatusBadgeProps {
   status: UserStatus;
@@ -11,12 +12,12 @@ export const StatusBadge = ({ status, className = '' }: StatusBadgeProps) => {
   const Icon = config.icon;
   
   return (
-    <span
-      className={`inline-flex items-center gap-x-1 px-3 py-1 rounded-full text-sm font-medium ring-1 ring-inset mt-3 ${config.class} ${className}`}
+    <Badge
+      className={`${config.class} ${className}`}
     >
-      <Icon className="h-4 w-4" />
+      <Icon />
       {config.label}
-    </span>
+    </Badge>
   );
 };
 

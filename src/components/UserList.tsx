@@ -4,6 +4,7 @@ import UserRoleBadge from "./UserRoleBadge";
 import { Card, CardTitle } from "./ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 
+
 type UserListProps = {
   data: User[];
 };
@@ -17,7 +18,7 @@ const getInitials = (firstName: string, lastName: string) => {
 const UserList = ({ data }: UserListProps) => {
   return (
     <div className="container">
-      <h3 className="text-3xl text-center">UserList</h3>
+      <h3 className="text-3xl text-center">Directory</h3>
       <div className="user-list">
         {data.map((user) => (
           <Card key={user.id} className="user-card shadow-md">
@@ -33,7 +34,6 @@ const UserList = ({ data }: UserListProps) => {
               {user.first_name} <span>{user.last_name}</span>
             </CardTitle>
             <UserRoleBadge role={user.role} />
-            <GenderBadge gender={user.gender} />
           </Card>
         ))}
       </div>
