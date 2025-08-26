@@ -30,7 +30,7 @@ export const users: User[] = [
     status: "active",
     join_date: "01/02/2020",
     role: "coach",
-    specialties: ["hiit", "boxing", "aquatic"],
+    specialties: ["Cycling", "HIIT", "Aquatic"],
     gym_location: "Gym Universe #118",
   },
     {
@@ -45,7 +45,7 @@ export const users: User[] = [
     status: "active",
     join_date: "01/02/2020",
     role: "coach",
-    specialties: ["hiit", "boxing", "aquatic"],
+    specialties: ["Boxing", "HIIT"],
     gym_location: "Gym Universe #118",
   },
   {
@@ -78,7 +78,7 @@ export const users: User[] = [
     role: "admin",
     access_level: "staff",
     gym_location: "Gym Universe #233",
-    permissions: ["cafe_inventory"],
+    permissions: ["class_scheduling"],
   },
   {
     id: 4,
@@ -128,5 +128,20 @@ export const users: User[] = [
     membership_tier: "basic",
     join_date: "01/22/2024",
     diet: "Low carb - high protein 4200 calories a day. Drinks whey protein shakes and eats 2 bananas afternoon. ",
+  },
+    {
+    id: 9,
+    first_name: "Pete",
+    last_name: "DeBore",
+    gender: "male",
+    email: "test2@email.com",
+    avatar_url: "na",
+    background_color: "#c7d7ffff",
+    status: "active",
+    join_date: "06/02/2019",
+    role: "admin",
+    gym_location: "Fit Spot #220",
+    permissions: ["cafe_inventory"],
+    access_level: "staff",
   },
 ];

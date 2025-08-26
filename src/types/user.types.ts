@@ -6,7 +6,7 @@ export interface BaseUser {
   avatar_url: string;
   background_color: string;
   gym_location: string;
-  join_date: string
+  join_date: string;
   gender: UserGender;
   status: UserStatus;
   role: UserRole;
@@ -29,26 +29,26 @@ export interface MemberUser extends BaseUser {
 
 export interface CoachUser extends BaseUser {
   role: "coach";
-  specialties: string[]
+  specialties: string[];
   bio: string;
 }
 
-interface AdminUser extends BaseUser {
-  role: 'admin'
-  permissions: string []
-  access_level?: 'staff' | 'supervisor' | 'manager'
+export interface AdminUser extends BaseUser {
+  role: "admin";
+  permissions: string[];
+  access_level?: "staff" | "supervisor" | "manager";
 }
 
-export type User = MemberUser | CoachUser | AdminUser
+export type User = MemberUser | CoachUser | AdminUser;
 
 export function isMember(user: User): user is MemberUser {
-  return user.role ==='member'
+  return user.role === "member";
 }
 
 export function isCoach(user: User): user is CoachUser {
-  return user.role === 'coach'
+  return user.role === "coach";
 }
 
 export function isAdmin(user: User): user is AdminUser {
-  return user.role ==="admin"
+  return user.role === "admin";
 }

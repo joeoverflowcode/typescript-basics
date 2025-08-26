@@ -1,5 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
-import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card"
+import { Card, CardDescription, CardTitle } from "./ui/card"
 import type { CoachUser } from "@/types/user.types"
 import { getInitials } from "@/lib/member.utils"
 
@@ -14,7 +14,7 @@ const CoachCard = ({coach}: CoachCardProps) => {
 <AvatarFallback>{getInitials(coach.first_name, coach.last_name)}</AvatarFallback>
         </Avatar>
         <CardTitle>{coach.first_name} {coach.last_name}</CardTitle>
-        <CardDescription>{coach.bio}</CardDescription>
+        <CardDescription>Bio: {coach.bio}<br/><br/>Classes: {coach.specialties.join(', ')}</CardDescription>
     </Card>
   )
 }
