@@ -10,7 +10,7 @@ const UserRoleBadge = ({ role }: RoleBadgeProps) => {
   const config = roleConfig[role];
   const Icon = config.icon;
   return (
-    <Badge>
+    <Badge variant="secondary">
     {config.label}
         <Icon />
     </Badge>

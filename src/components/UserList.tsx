@@ -1,5 +1,4 @@
 import type { User } from "../types/user.types";
-import GenderBadge from "./GenderBadge";
 import UserRoleBadge from "./UserRoleBadge";
 import { Card, CardTitle } from "./ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";

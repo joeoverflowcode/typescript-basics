@@ -5,6 +5,7 @@ export interface BaseUser {
   email: string;
   avatar_url: string;
   background_color: string;
+  gym_location: string;
   join_date: string
   gender: UserGender;
   status: UserStatus;
@@ -18,14 +19,15 @@ export type UserGender = "male" | "female";
 export type UserRole = "member" | "admin" | "coach";
 
 
-interface MemberUser extends BaseUser {
+export interface MemberUser extends BaseUser {
   role: "member";
   user_name: string;
   membership_tier: "basic" | "premium";
-  fitness_goals: string;
+  fitness_goals?: string;
+  diet?: string;
 }
 
-interface CoachUser extends BaseUser {
+export interface CoachUser extends BaseUser {
   role: "coach";
   specialties: string[]
   bio: string;
