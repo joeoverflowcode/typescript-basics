@@ -18,6 +18,7 @@ export type UserGender = "male" | "female";
 
 export type UserRole = "member" | "admin" | "coach";
 
+export type UserAccess = "staff" | "supervisor" | "manager";
 
 export interface MemberUser extends BaseUser {
   role: "member";
@@ -35,8 +36,9 @@ export interface CoachUser extends BaseUser {
 
 export interface AdminUser extends BaseUser {
   role: "admin";
+  staff_id: string;
   permissions: string[];
-  access_level?: "staff" | "supervisor" | "manager";
+  access_level: UserAccess;
 }
 
 export type User = MemberUser | CoachUser | AdminUser;
