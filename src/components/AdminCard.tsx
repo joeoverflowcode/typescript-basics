@@ -29,13 +29,13 @@ const AdminCard = ({ admin }: AdminCardProps) => {
         </AvatarFallback>
       </Avatar>
       <CardTitle>
-        {admin.first_name} {admin.last_name}
+        {admin.first_name} {admin.last_name}<br/>
+        <span className="text-sm font-light">{admin.staff_id}</span><br/>
+        <span className="text-sm font-light">{admin.gym_location}</span>
       </CardTitle>
-      <CardDescription>Staff Number: {admin.staff_id}</CardDescription>
-      <CardContent>Location: {admin.gym_location}</CardContent>
-      <StatusBadge status={admin.status} />
       <AccessBadge access={admin.access_level} />
-      <CardDescription>Staff Since: {admin.join_date}</CardDescription>
+      <StatusBadge status={admin.status} />
+      <CardDescription>Employee Since: {admin.join_date}</CardDescription>
       <CardFooter>
         <div className="flex">
           {admin.permissions.map((permission, index) => (

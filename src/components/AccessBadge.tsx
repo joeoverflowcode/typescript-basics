@@ -5,15 +5,18 @@ import { accessConfig } from "@/config/access.config";
 type AccessBadgeProps = {
   access: UserAccess;
   className?: string;
+  iconSize?: number;
 };
 
 const AccessBadge = ({ access }: AccessBadgeProps) => {
     const config = accessConfig[access]
     const Icon = config.icon
 
-  return <Badge className="text-sm">
+  return <Badge className="text-md" variant="outline">
   {config.label}
-  <Icon/>
+  <div>
+  <Icon size={22} />
+  </div>
   </Badge>;
 };
 
